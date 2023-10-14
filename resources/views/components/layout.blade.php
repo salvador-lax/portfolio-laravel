@@ -6,21 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salvador Lax Herrera</title>
-    @vite('resources/css/app.css')
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-black text-gray-200 w-2/4 mx-auto my-2.5">
-    <nav>
-        <ol class="flex justify-evenly">
+<body class="bg-black text-gray-200 lg:w-2/4 mx-auto my-2.5">
+    <nav class="sticky top-0">
+        <ol class="flex justify-evenly text-xl">
             <li>
-                <a href="{{ route('index') }}" >
-                    Index
-                </a>
-            </li>
-
-            <li>
-                <a href="{{ route('about') }}">
-                    About
+                <a href="{{ route('info') }}">
+                    Info
                 </a>
             </li>
 
@@ -29,12 +24,30 @@
                     Jobs
                 </a>
             </li>
+
+            <li>
+                <a href="{{ route('contact') }}">
+                    Contact
+                </a>
+            </li>
         </ol>
     </nav>
 
-    <section>
+    <section class="flex justify-center my-10 mx-5">
         {{ $slot }}
     </section>
+
+    <footer>
+        <section class="flex justify-center text-5xl">
+            <a href="https://www.linkedin.com/in/salvador-lax-herrera-b65831213/" target="_blank">
+                <i title="Linkedin" class="ri-linkedin-box-fill"></i>
+            </a>
+
+            <a href="https://github.com/salvador-lax" target="_blank">
+                <i title="GitHub" class="ri-github-fill"></i>
+            </a>
+        </section>
+    </footer>
 </body>
 
 </html>
