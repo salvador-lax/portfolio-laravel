@@ -24,18 +24,20 @@
                     Jobs
                 </a>
             </li>
-
-            <li>
-                <a href="{{ route('contact') }}">
-                    Contact
-                </a>
-            </li>
         </ol>
     </nav>
 
     <section class="flex justify-center my-10 mx-5">
         {{ $slot }}
     </section>
+
+    @if (!Route::is('contact'))
+        <section class="fixed bottom-0 right-0 w-1/">
+            <a href="{{ route('contact') }}">
+                <i title="Mail" class="ri-mail-fill text-4xl"></i>
+            </a>
+        </section>
+    @endif
 
     <footer>
         <section class="flex justify-center text-5xl">
