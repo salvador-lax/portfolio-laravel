@@ -10,7 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-black text-gray-200 lg:w-2/4 mx-auto my-2.5">
+<body class="d- bg-black text-gray-200 lg:w-2/4 mx-auto my-2.5">
     <nav class="sticky top-0">
         <ol class="flex justify-evenly text-xl">
             <li>
@@ -32,7 +32,7 @@
     </section>
 
     @if (!Route::is('contact'))
-        <section class="fixed bottom-0 right-0 w-1/">
+        <section class="fixed bottom-0 right-0 m-4 lg:mx-0 lg:mb-2 lg:w-1/4">
             <a href="{{ route('contact') }}">
                 <i title="Mail" class="ri-mail-fill text-4xl"></i>
             </a>
