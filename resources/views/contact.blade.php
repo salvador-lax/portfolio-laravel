@@ -24,5 +24,9 @@
                 {{ old('message') }}
             </textarea>
         </label>
+
+        <button type="submit">
+            Enviar
+        </button>
     </form>
 </x-layout>
