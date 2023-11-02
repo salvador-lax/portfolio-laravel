@@ -18,7 +18,7 @@ class ContactRequest extends Mailable
      * Create a new message instance.
      */
     public function __construct(
-        array $requestInput
+        public array $requestInput
     ) {
         //
     }
