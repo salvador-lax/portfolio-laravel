@@ -19,14 +19,14 @@ class ContactRequestController extends Controller
             'phone' => [
                 'required',
                 'numeric',
-                'digits:10'
+                'digits_between:9,10'
             ],
             'message' => [
                 'max:1000'
             ]
         ]);
 
-        Mail::to('prueba')->send(new ContactRequest($request->input()));
+        Mail::to(env('MAIL_CONTACT'))->send(new ContactRequest($request->input()));
 
         return redirect('/contact');
     }
