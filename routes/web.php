@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactRequestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,6 @@ Route::view('/info', 'info')
 
 Route::view('/contact', 'contact')
     ->name('contact');
+
+Route::post('/contactRequest', [ContactRequestController::class, 'sendRequest'])
+    ->name('contactRequest');
