@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactRequestController extends Controller
 {
-    public function sendRequest(Request $request): RedirectResponse
+    public function sendRequest(Request $request)
     {
         $request->validate([
             'email' => [
@@ -28,6 +28,6 @@ class ContactRequestController extends Controller
 
         Mail::to(env('MAIL_CONTACT'))->send(new ContactRequest($request->input()));
 
-        return redirect('/contact');
+        return view('contact', ['sent' => true]);
     }
 }
