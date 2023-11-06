@@ -27,7 +27,7 @@
         </ol>
     </nav>
 
-    <section class="flex justify-center my-10 mx-5">
+    <section class="flex flex-col justify-center items-center my-10 mx-5">
         {{ $slot }}
     </section>
 
