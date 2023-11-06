@@ -1,7 +1,7 @@
 <x-layout>
-    @if ($sent)
+    @isset ($sent)
         <p>Su peticion de contacto ha sido enviada con exito.</p>
-    @endif
+    @endisset
     <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:contents">
         @csrf
 
