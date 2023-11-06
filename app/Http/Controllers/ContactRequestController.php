@@ -28,6 +28,7 @@ class ContactRequestController extends Controller
 
         Mail::to(env('MAIL_CONTACT'))->send(new ContactRequest($request->input()));
 
-        return view('contact', ['sent' => true]);
+        return back()
+            ->with(['sent' => 'Su peticion de contacto ha sido enviada con exito.']);
     }
 }
