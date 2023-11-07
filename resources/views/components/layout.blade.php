@@ -12,7 +12,7 @@
 
 <body class="bg-black text-gray-200 lg:w-2/4 mx-auto my-2.5">
     <nav class="sticky top-0">
-        <ol class="flex justify-evenly text-xl">
+        <ol class="flex justify-evenly text-xl font-bold">
             <li>
                 <a href="{{ route('info') }}">
                     Info
