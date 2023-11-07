@@ -10,7 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="d- bg-black text-gray-200 lg:w-2/4 mx-auto my-2.5">
+<body class="bg-black text-gray-200 lg:w-2/4 mx-auto my-2.5">
     <nav class="sticky top-0">
         <ol class="flex justify-evenly text-xl">
             <li>
