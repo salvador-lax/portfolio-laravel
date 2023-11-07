@@ -24,9 +24,7 @@
 
         <label>
             Send message (optional):
-            <textarea name="message" maxlength="1000" class="rounded-sm text-black" va>
-                {{ old('message', null) }}
-            </textarea>
+            <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
         </label>
 
         <button type="submit" class="bg-white hover:bg-slate-100 text-black w-fit p-1 mx-auto rounded font-bold">
