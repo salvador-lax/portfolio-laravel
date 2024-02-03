@@ -9,7 +9,7 @@ export default {
     extend: {},
   },
   plugins: [
-    function ({ addVariant }) {
+    ({ addVariant }) => {
         addVariant('child', '& > *');
         addVariant('child-hover', '& > *:hover');
     }
