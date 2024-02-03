@@ -1,6 +1,6 @@
 <x-layout>
     @if (Session::has('sent'))
-        <p class="mb-4 font-bold text-lg">{{ Session::get('sent') }}</p>
+        <p class="mb-4 font-bold text-lg">Your contact request has been send succesfully</p>
     @endif
 
     <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:grid">
