@@ -295,6 +295,9 @@
 
                 <label>
                     Mensaje (opcional):
+                    @error('message')
+                        <span class="alert alert-danger">El contenido de su mensaje no debe superar los 1000 caracteres</span>
+                    @enderror
                     <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
                 </label>
 
