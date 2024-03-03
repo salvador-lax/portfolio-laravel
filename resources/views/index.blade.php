@@ -15,20 +15,20 @@
         <nav class="w-fit mx-auto">
             <ol class="flex justify-center gap-8 text-xl font-bold">
                 <li>
-                    <a href="#jobs">
-                        Jobs
+                    <a href="/#jobs">
+                        Trabajos
                     </a>
                 </li>
 
                 <li>
-                    <a href="#about">
-                        About
+                    <a href="/#about">
+                        Proyectos
                     </a>
                 </li>
 
                 <li>
-                    <a href="#contact">
-                        Contact
+                    <a href="/#contact">
+                        Contacto
                     </a>
                 </li>
             </ol>
@@ -36,7 +36,7 @@
     </header>
 
     <main class="lg:w-2/4 mx-auto">
-        <section class="flex flex-col justify-center my-32 mx-5">
+        <section class="flex flex-col justify-center mt-32 mb-16 mx-5 max-w-xl">
             <div class="flex items-center gap-4 mb-4">
                 <img src="{{ asset('img/profile-pic.webp') }}" alt="Foto de Perfil" class="rounded-full size-16">
                 <p>
@@ -44,7 +44,7 @@
                 </p>
             </div>
 
-            <h1 class="text-4xl mb-4">Hola, soy Salvador Lax</h1>
+            <h1 class="text-4xl text-bold mb-4">Hola, soy Salvador Lax</h1>
 
             <p class="text-xl">
                 Mas de 1 año de experiencia. Desarrollador Full-Stack en Cádiz, España. Especializado en desarrollo
@@ -53,7 +53,46 @@
             </p>
         </section>
 
-        <section id="jobs" class="flex flex-col justify-center items-center my-10 mx-5">
+        <section id="contact" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
+            <h2 class="text-3xl mb-8">
+                Contactame
+            </h2>
+            @if (Session::has('sent'))
+                <p class="mb-4 font-bold text-lg">Tu solicitud de contacto ha sido enviada</p>
+            @endif
+
+            <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:grid">
+                @csrf
+
+                <label>
+                    Email:
+                    @error('email')
+                        <span class="alert alert-danger">Email is not valid</span>
+                    @enderror
+                    <input name="email" type="email" value="{{ old('email') }}" class="rounded-sm text-black">
+                </label>
+
+                <label>
+                    Telefono:
+                    @error('phone')
+                        <span class="alert alert-danger">El telefono no es valido</span>
+                    @enderror
+                    <input name="phone" type="tel" value="{{ old('phone') }}" class="rounded-sm text-black">
+                </label>
+
+                <label>
+                    Mensaje (opcional):
+                    <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
+                </label>
+
+                <button type="submit"
+                    class="bg-white hover:bg-slate-100 text-black w-fit p-1 mx-auto rounded font-bold">
+                    Enviar
+                </button>
+            </form>
+        </section>
+
+        <section id="jobs" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
             <p>rem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan est vel turpis facilisis, in
                 lacinia
                 augue aliquam. Sed aliquet convallis ante, quis sodales libero mollis eu. Cras aliquam tellus in sem
@@ -155,7 +194,7 @@
                 tortor sit amet enim.</p>
         </section>
 
-        <section id="about" class="flex flex-col justify-center items-center my-10 mx-5">
+        <section id="about" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
             <p>
                 Etiam id lobortis urna. Integer fringilla ipsum et elit mattis auctor. Fusce convallis elementum sapien
                 quis
@@ -265,45 +304,9 @@
                 libero faucibus. In hac habitasse platea dictumst.
             </p>
         </section>
-
-        <section id="contact" class="flex flex-col justify-center items-center my-10 mx-5">
-            @if (Session::has('sent'))
-                <p class="mb-4 font-bold text-lg">Your contact request has been send succesfully</p>
-            @endif
-
-            <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:grid">
-                @csrf
-
-                <label>
-                    Email:
-                    @error('email')
-                        <span class="alert alert-danger">Email is not valid</span>
-                    @enderror
-                    <input name="email" type="email" value="{{ old('email') }}" class="rounded-sm text-black">
-                </label>
-
-                <label>
-                    Phone:
-                    @error('phone')
-                        <span class="alert alert-danger">Phone is not valid</span>
-                    @enderror
-                    <input name="phone" type="tel" value="{{ old('phone') }}" class="rounded-sm text-black">
-                </label>
-
-                <label>
-                    Send message (optional):
-                    <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
-                </label>
-
-                <button type="submit"
-                    class="bg-white hover:bg-slate-100 text-black w-fit p-1 mx-auto rounded font-bold">
-                    Send
-                </button>
-            </form>
-        </section>
     </main>
 
-    <footer>
+    <footer class="mt-20 mb-4">
         <section class="flex justify-center text-5xl">
             <a href="https://www.linkedin.com/in/salvador-lax-herrera-b65831213/" target="_blank">
                 <i title="Linkedin" class="ri-linkedin-box-fill"></i>
