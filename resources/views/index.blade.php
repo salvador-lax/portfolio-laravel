@@ -269,17 +269,18 @@
             <h2 class="text-3xl mb-8">
                 Contactame
             </h2>
-            @if (Session::has('sent'))
-                <p class="mb-4 font-bold text-lg">Tu solicitud de contacto ha sido enviada</p>
-            @endif
 
             <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:grid">
                 @csrf
 
+                @if (Session::has('sent'))
+                    <p class="mb-4 font-bold text-lg">Tu solicitud de contacto ha sido enviada</p>
+                @endif
+
                 <label>
                     Email:
                     @error('email')
-                        <span class="alert alert-danger">Email is not valid</span>
+                        <span class="alert alert-danger">El email no es valido</span>
                     @enderror
                     <input name="email" type="email" value="{{ old('email') }}" class="rounded-sm text-black">
                 </label>
