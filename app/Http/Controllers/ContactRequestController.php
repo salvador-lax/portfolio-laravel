@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactRequest;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class ContactRequestController extends Controller
 {
     public function sendRequest(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'email' => [
                 'required',
                 'email'
@@ -26,11 +26,17 @@ class ContactRequestController extends Controller
             ]
         ]);
 
+        if ($validator->fails()) {
+            return redirect("/#contact")
+                ->withErrors($validator)
+                ->withInput();
+        }
+
         Mail::to(
             env('MAIL_CONTACT')
         )->send(new ContactRequest($request->input()));
 
-        return back()
+        return redirect("/#contact")
             ->with(['sent' => true]);
     }
 }
