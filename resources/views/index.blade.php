@@ -48,48 +48,8 @@
 
             <p class="text-xl">
                 Mas de 1 año de experiencia. Desarrollador Full-Stack en Cádiz, España. Especializado en desarrollo
-                Back-End
-                en aplicaciones de gestion de contenido.
+                Back-End en aplicaciones de gestion de contenido.
             </p>
-        </section>
-
-        <section id="contact" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
-            <h2 class="text-3xl mb-8">
-                Contactame
-            </h2>
-            @if (Session::has('sent'))
-                <p class="mb-4 font-bold text-lg">Tu solicitud de contacto ha sido enviada</p>
-            @endif
-
-            <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:grid">
-                @csrf
-
-                <label>
-                    Email:
-                    @error('email')
-                        <span class="alert alert-danger">Email is not valid</span>
-                    @enderror
-                    <input name="email" type="email" value="{{ old('email') }}" class="rounded-sm text-black">
-                </label>
-
-                <label>
-                    Telefono:
-                    @error('phone')
-                        <span class="alert alert-danger">El telefono no es valido</span>
-                    @enderror
-                    <input name="phone" type="tel" value="{{ old('phone') }}" class="rounded-sm text-black">
-                </label>
-
-                <label>
-                    Mensaje (opcional):
-                    <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
-                </label>
-
-                <button type="submit"
-                    class="bg-white hover:bg-slate-100 text-black w-fit p-1 mx-auto rounded font-bold">
-                    Enviar
-                </button>
-            </form>
         </section>
 
         <section id="jobs" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
@@ -303,6 +263,45 @@
                 malesuada
                 libero faucibus. In hac habitasse platea dictumst.
             </p>
+        </section>
+
+        <section id="contact" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
+            <h2 class="text-3xl mb-8">
+                Contactame
+            </h2>
+            @if (Session::has('sent'))
+                <p class="mb-4 font-bold text-lg">Tu solicitud de contacto ha sido enviada</p>
+            @endif
+
+            <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:grid">
+                @csrf
+
+                <label>
+                    Email:
+                    @error('email')
+                        <span class="alert alert-danger">Email is not valid</span>
+                    @enderror
+                    <input name="email" type="email" value="{{ old('email') }}" class="rounded-sm text-black">
+                </label>
+
+                <label>
+                    Telefono:
+                    @error('phone')
+                        <span class="alert alert-danger">El telefono no es valido</span>
+                    @enderror
+                    <input name="phone" type="tel" value="{{ old('phone') }}" class="rounded-sm text-black">
+                </label>
+
+                <label>
+                    Mensaje (opcional):
+                    <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
+                </label>
+
+                <button type="submit"
+                    class="bg-white hover:bg-slate-100 text-black w-fit p-1 mx-auto rounded font-bold">
+                    Enviar
+                </button>
+            </form>
         </section>
     </main>
 
