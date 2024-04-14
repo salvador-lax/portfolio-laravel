@@ -1,0 +1,19 @@
+{
+	"Inmobigrama": {
+		"puesto": "Full-Stack Developer",
+		"duracion": "Actualmente",
+		"apuntes": [
+			"Desarollo de CRM inmobiliario y paginas web para agencias.",
+			"Desarrollo de sistemas para manejar datos relacionados a viviendas y clientes.",
+			"Desarrollo de comunicacion con APIs de portales inmobiliarios como Idealista y Fotocasa para publicacion de anuncios."
+		]
+	},
+	"Vanity Biss": {
+		"puesto": "Wordpress Developer (Practicas)",
+		"duracion": "03/2022 - 06/2022",
+		"apuntes": [
+			"Desarollo de paginas web Wordpress Woocomerce orientadas al SEO.",
+			"Desarrollo de plugins y plantillas para Wordpress."
+		]
+	}
+}

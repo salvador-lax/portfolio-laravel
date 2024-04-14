@@ -14,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index')
+Route::view('/', 'index', [
+    'jobs' => json_decode(
+        File::get(
+            storage_path('portfolio/jobs.json')
+        ),
+        true
+    )
+])
     ->name('index');
 
 Route::post('/contactRequest', [ContactRequestController::class, 'sendRequest'])

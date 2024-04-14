@@ -52,106 +52,34 @@
             </p>
         </section>
 
-        <section id="jobs" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
-            <p>rem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan est vel turpis facilisis, in
-                lacinia
-                augue aliquam. Sed aliquet convallis ante, quis sodales libero mollis eu. Cras aliquam tellus in sem
-                porttitor, eget consequat dolor laoreet. Nunc interdum blandit pharetra. Duis id sapien nec eros commodo
-                dignissim. Nunc iaculis suscipit tellus, ut sodales eros rutrum id. Vestibulum interdum nisl id quam
-                porta,
-                a varius odio blandit. Curabitur ultricies sagittis sem nec varius. Vivamus eleifend elit ante, quis
-                feugiat
-                ex ultricies a. Etiam vel auctor libero. Nunc ac viverra elit, vulputate semper tellus. Aliquam et
-                feugiat
-                elit, vel scelerisque nulla. Nunc at tincidunt elit, et facilisis mi. Maecenas id leo sagittis, pretium
-                urna
-                ut, fringilla ex. Curabitur nec gravida eros, sed pretium tortor.
+        <section id="jobs" class="flex flex-col justify-center mt-20 mx-5 scroll-m-20">
+            <h2 class="text-3xl mb-3">
+                Experiencia Laboral
+            </h2>
 
-                Morbi elementum pharetra leo quis gravida. Pellentesque et purus sed justo hendrerit maximus nec in
-                massa.
-                Vivamus sollicitudin sit amet neque et consequat. Duis id aliquam ante. Nunc vitae justo mi. Class
-                aptent
-                taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec metus eu ante
-                ullamcorper auctor in ac quam. Praesent sodales purus ac tincidunt ultrices. Donec id diam nec ex
-                interdum
-                tincidunt. Phasellus elementum convallis vehicula. Aliquam eu neque arcu. Donec a sollicitudin massa, at
-                posuere turpis.
+            @foreach ($jobs as $company => $job)
+                <article class="flex flex-col lg:flex-row mb-6">
+                    <div class="lg:w-1/3">
+                        <h3>
+                            {{ $job['puesto'] }}
+                        </h3>
+                        <h4>
+                            {{ $company }}
+                        </h4>
+                        <p>
+                            {{ $job['duracion'] }}
+                        </p>
+                    </div>
 
-                In vulputate ex et sollicitudin fringilla. Nulla facilisi. Etiam ut massa et dolor tincidunt hendrerit
-                vehicula in tellus. Nunc bibendum est accumsan, efficitur felis sed, congue arcu. Donec aliquet, nunc eu
-                facilisis euismod, eros risus varius sapien, ut interdum mauris nisi non orci. Nam et dui ac nisi
-                ultricies
-                placerat sodales eu felis. Curabitur interdum arcu ipsum, vel pretium diam cursus congue. Aenean quis
-                lacus
-                eu felis mattis commodo eget quis tellus.
-
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc est
-                magna,
-                vulputate quis diam vitae, condimentum porttitor odio. Curabitur vel urna vitae massa molestie mattis.
-                Vivamus pretium risus enim, et maximus tortor luctus rutrum. Interdum et malesuada fames ac ante ipsum
-                primis in faucibus. Mauris nec massa pulvinar, porta turpis eget, aliquet sem. Fusce et tortor id ligula
-                lacinia placerat. Nullam vitae dapibus metus. Donec egestas eu diam a sollicitudin. Fusce placerat risus
-                vel
-                orci suscipit, ac posuere ex condimentum. Maecenas varius et velit ut hendrerit. Etiam et arcu
-                malesuada,
-                consequat dolor nec, sollicitudin massa. Quisque ac odio at odio posuere rutrum eu in turpis.
-
-                Mauris et risus a ligula consectetur dignissim. Proin congue a massa vitae luctus. Duis ullamcorper
-                pretium
-                ex, rhoncus vulputate tortor. Nunc dignissim ultricies dolor at varius. Duis laoreet est sit amet massa
-                efficitur, id maximus justo feugiat. Ut vitae venenatis tortor, vitae efficitur mauris. Praesent tempor
-                lacus blandit malesuada viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                posuere
-                cubilia curae; Aenean imperdiet nulla in tristique facilisis. Morbi tempus ligula felis, in faucibus
-                nunc
-                pharetra eu. Duis vitae vehicula augue. Donec dignissim mi commodo, iaculis lectus at, venenatis tortor.
-                Quisque porta mauris ac diam sagittis, quis hendrerit turpis maximus.
-
-                Pellentesque scelerisque sapien nec augue tempus, a auctor risus euismod. Nulla ac massa elementum nulla
-                vulputate facilisis non eu ex. Sed ac ornare erat. Aliquam ut dolor at nibh efficitur volutpat. Praesent
-                dignissim fringilla aliquet. Proin rhoncus condimentum purus in congue. Suspendisse ultricies ligula
-                velit,
-                et imperdiet elit hendrerit ac. Aenean ut fermentum velit, et interdum magna. Morbi in porttitor ante.
-                Suspendisse lobortis odio sed tempus porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et
-                ultrices posuere cubilia curae; Maecenas at felis eu quam porta ultrices vitae tincidunt ante. Nam nulla
-                quam, convallis nec lacinia in, tempor eu risus. Vestibulum ante ipsum primis in faucibus orci luctus et
-                ultrices posuere cubilia curae; Phasellus quis fringilla augue. Vivamus ut imperdiet nisi.
-
-                Duis est ipsum, consectetur in ullamcorper vel, feugiat ac leo. Proin nunc ante, tempor sed risus sit
-                amet,
-                imperdiet egestas augue. Pellentesque placerat vel mi at sagittis. Cras at lacus scelerisque, sagittis
-                magna
-                sit amet, varius tellus. Vestibulum ut ante iaculis, hendrerit neque eu, imperdiet elit. Maecenas
-                interdum
-                massa vel nisl commodo tristique id quis nisl. Sed malesuada viverra mi sed vehicula.
-
-                Fusce cursus vel sapien sit amet tempor. Donec arcu arcu, porttitor vel dictum congue, tempus eu metus.
-                In
-                id mattis ante. Cras sed magna euismod, convallis urna nec, accumsan felis. Donec et iaculis neque.
-                Interdum
-                et malesuada fames ac ante ipsum primis in faucibus. Proin ultricies venenatis ipsum, sed tempus enim
-                sodales ut. In arcu velit, maximus sed volutpat id, pharetra ac quam. Quisque dictum ultricies massa in
-                consectetur. Donec non vehicula purus. Vestibulum arcu dolor, interdum ut elit sit amet, placerat
-                convallis
-                nunc. Cras quis ullamcorper mi, ut rutrum sem.
-
-                Aliquam aliquam euismod leo, vel iaculis enim pellentesque vel. Sed interdum lectus a velit placerat
-                scelerisque. Nullam pellentesque, sem sit amet gravida varius, nisl velit aliquam velit, vitae congue
-                lectus
-                sapien non odio. Nam maximus posuere enim at luctus. Vestibulum bibendum, mauris ut commodo scelerisque,
-                eros urna placerat magna, sit amet commodo odio eros in diam. Proin nec elit maximus, semper sapien a,
-                molestie nibh. Pellentesque et orci faucibus turpis ultrices eleifend nec in metus. Nullam a velit vitae
-                mauris suscipit efficitur.
-
-                Aenean posuere varius nisl, ut fermentum est sollicitudin vel. Proin ac tortor non nisi varius vulputate
-                in
-                id risus. Morbi vitae ipsum et lectus lacinia lobortis. Curabitur sed congue lorem, vel facilisis ante.
-                Sed
-                viverra eleifend justo sed pellentesque. Aliquam erat volutpat. Mauris aliquam scelerisque ipsum, nec
-                interdum leo vehicula eu. Vivamus lobortis elementum libero. Quisque facilisis quam id erat luctus
-                blandit.
-                Aliquam accumsan, justo sit amet dapibus vestibulum, lacus urna volutpat mauris, sit amet ornare purus
-                tortor sit amet enim.</p>
+                    <div class="lg:w-2/3 mt-2 lg:mt-0">
+                        @foreach ($job['apuntes'] as $apunte)
+                            <p>
+                                {{ $apunte }}
+                            </p>
+                        @endforeach
+                    </div>
+                </article>
+            @endforeach
         </section>
 
         <section id="about" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
@@ -296,7 +224,9 @@
                 <label>
                     Mensaje (opcional):
                     @error('message')
-                        <span class="alert alert-danger">El contenido de su mensaje no debe superar los 1000 caracteres</span>
+                        <span class="alert alert-danger">
+                            El contenido de su mensaje no debe superar los 1000 caracteres
+                        </span>
                     @enderror
                     <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
                 </label>
