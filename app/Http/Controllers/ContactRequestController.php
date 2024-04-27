@@ -34,7 +34,9 @@ class ContactRequestController extends Controller
 
         Mail::to(
             env('MAIL_CONTACT')
-        )->send(new ContactRequest($request->input()));
+        )
+            ->cc($request->input('email'))
+            ->send(new ContactRequest($request->all()));
 
         return redirect("/#contact")
             ->with(['sent' => true]);
