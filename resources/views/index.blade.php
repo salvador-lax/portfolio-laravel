@@ -198,7 +198,8 @@
                 Contactame
             </h2>
 
-            <form method="POST" action="{{ route('contactRequest') }}" class="flex flex-col gap-4 child:grid">
+            <form method="POST" action="{{ route('contactRequest') }}"
+                class="flex flex-col gap-4 w-full max-w-xs child:grid">
                 @csrf
 
                 @if (Session::has('sent'))
@@ -210,7 +211,7 @@
                     @error('email')
                         <span class="alert alert-danger">El email no es valido</span>
                     @enderror
-                    <input name="email" type="email" value="{{ old('email') }}" class="rounded-sm text-black">
+                    <input name="email" type="email" value="{{ old('email') }}" class="rounded-sm text-black p-3">
                 </label>
 
                 <label>
@@ -218,7 +219,7 @@
                     @error('phone')
                         <span class="alert alert-danger">El telefono no es valido</span>
                     @enderror
-                    <input name="phone" type="tel" value="{{ old('phone') }}" class="rounded-sm text-black">
+                    <input name="phone" type="tel" value="{{ old('phone') }}" class="rounded-sm text-black p-3">
                 </label>
 
                 <label>
@@ -228,11 +229,11 @@
                             El contenido de su mensaje no debe superar los 1000 caracteres
                         </span>
                     @enderror
-                    <textarea name="message" maxlength="1000" class="rounded-sm text-black">{{ old('message') }}</textarea>
+                    <textarea name="message" maxlength="1000" class="rounded-sm text-black p-3">{{ old('message') }}</textarea>
                 </label>
 
                 <button type="submit"
-                    class="bg-white hover:bg-slate-100 text-black w-fit p-1 mx-auto rounded font-bold">
+                    class="bg-white hover:bg-slate-100 text-black px-5 py-2 mx-auto rounded font-bold">
                     Enviar
                 </button>
             </form>
