@@ -50,6 +50,7 @@
                 Mas de 1 año de experiencia. Desarrollador Full-Stack en Cádiz, España. Especializado en desarrollo
                 Back-End en aplicaciones de gestion de contenido.
             </p>
+            <x-social class="mt-2"></x-social>
         </section>
 
         <section id="jobs" class="flex flex-col justify-center mt-20 mx-5 scroll-m-20">
@@ -241,15 +242,7 @@
     </main>
 
     <footer class="mt-20 mb-4">
-        <section class="flex justify-center text-5xl">
-            <a href="https://www.linkedin.com/in/salvador-lax-herrera-b65831213/" target="_blank">
-                <i title="Linkedin" class="ri-linkedin-box-fill"></i>
-            </a>
-
-            <a href="https://github.com/salvador-lax" target="_blank">
-                <i title="GitHub" class="ri-github-fill"></i>
-            </a>
-        </section>
+        <x-social class="justify-center"></x-social>
     </footer>
 </body>
 
