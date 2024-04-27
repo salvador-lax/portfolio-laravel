@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'index', [
-    'jobs' => json_decode(
+    'experience' => json_decode(
         File::get(
-            storage_path('portfolio/jobs.json')
+            storage_path('portfolio/experience.json')
         ),
         true
     )

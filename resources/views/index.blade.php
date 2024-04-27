@@ -16,14 +16,14 @@
             <ol
                 class="flex justify-center gap-8 text-xl font-bold px-4 py-2 bg-white bg-opacity-75 text-black rounded-full">
                 <li>
-                    <a href="/#jobs">
-                        Trabajos
+                    <a href="/#experience">
+                        Experiencia
                     </a>
                 </li>
 
                 <li>
                     <a href="/#about">
-                        Proyectos
+                        Trabajos
                     </a>
                 </li>
 
@@ -54,12 +54,12 @@
             <x-social class="mt-2"></x-social>
         </section>
 
-        <section id="jobs" class="flex flex-col justify-center mt-20 mx-5 scroll-m-20">
+        <section id="experience" class="flex flex-col justify-center mt-20 mx-5 scroll-m-20">
             <h2 class="text-3xl mb-3">
                 Experiencia Laboral
             </h2>
 
-            @foreach ($jobs as $company => ['puesto' => $puesto, 'duracion' => $duracion, 'apuntes' => $apuntes])
+            @foreach ($experience as $company => ['puesto' => $puesto, 'duracion' => $duracion, 'apuntes' => $apuntes])
                 <article class="flex flex-col lg:flex-row mb-6">
                     <div class="lg:w-1/3">
                         <h3>
