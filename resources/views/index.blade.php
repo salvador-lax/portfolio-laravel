@@ -57,22 +57,22 @@
                 Experiencia Laboral
             </h2>
 
-            @foreach ($jobs as $company => $job)
+            @foreach ($jobs as $company => ['puesto' => $puesto, 'duracion' => $duracion, 'apuntes' => $apuntes])
                 <article class="flex flex-col lg:flex-row mb-6">
                     <div class="lg:w-1/3">
                         <h3>
-                            {{ $job['puesto'] }}
+                            {{ $puesto }}
                         </h3>
                         <h4>
                             {{ $company }}
                         </h4>
                         <p>
-                            {{ $job['duracion'] }}
+                            {{ $duracion }}
                         </p>
                     </div>
 
                     <div class="lg:w-2/3 mt-2 lg:mt-0">
-                        @foreach ($job['apuntes'] as $apunte)
+                        @foreach ($apuntes as $apunte)
                             <p>
                                 {{ $apunte }}
                             </p>
