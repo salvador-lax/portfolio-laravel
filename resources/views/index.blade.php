@@ -13,7 +13,8 @@
 <body class="bg-black text-gray-200">
     <header class="fixed top-0 z-10 w-full mt-2">
         <nav class="w-fit mx-auto">
-            <ol class="flex justify-center gap-8 text-xl font-bold">
+            <ol
+                class="flex justify-center gap-8 text-xl font-bold px-4 py-2 bg-white bg-opacity-75 text-black rounded-full">
                 <li>
                     <a href="/#jobs">
                         Trabajos
