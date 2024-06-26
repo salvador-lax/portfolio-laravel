@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => 'resend',
 
     /*
     |--------------------------------------------------------------------------
@@ -84,10 +84,7 @@ return [
                 'smtp',
                 'log',
             ],
-        ],
-        'resend' => [
-            'transport' => 'resend',
-        ],
+        ]
     ],
 
     /*
