@@ -11,7 +11,8 @@
 </head>
 
 <body class="bg-black text-gray-200">
-    <header class="fixed top-0 z-10 w-full mt-2">
+    <!-- Este menu se añadira mas adelante, cuando haya mas contenido que se pueda añadir -->
+    <!-- <header class="fixed top-0 z-10 w-full mt-2">
         <nav class="w-fit mx-auto">
             <ol
                 class="flex justify-center gap-8 text-xl font-bold px-4 py-2 bg-white bg-opacity-75 text-black rounded-full">
@@ -34,7 +35,7 @@
                 </li>
             </ol>
         </nav>
-    </header>
+    </header> -->
 
     <main class="lg:w-2/4 mx-auto">
         <section class="flex flex-col justify-center mt-32 mb-16 mx-5 max-w-xl">
@@ -84,7 +85,7 @@
             @endforeach
         </section>
 
-        <section id="about" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
+        <!-- <section id="about" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
             <p>
                 Etiam id lobortis urna. Integer fringilla ipsum et elit mattis auctor. Fusce convallis elementum sapien
                 quis
@@ -193,7 +194,7 @@
                 malesuada
                 libero faucibus. In hac habitasse platea dictumst.
             </p>
-        </section>
+        </section> -->
 
         <section id="contact" class="flex flex-col justify-center items-center mt-20 mx-5 scroll-m-20">
             <h2 class="text-3xl mb-8">
